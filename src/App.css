@@ -71,5 +71,51 @@
   font-weight: bold;
   color: #b8b8b8;
   margin: 0;
-
+}
+.fest-part{
+  background: black;
+  border-radius: 50% 50% 0 0 / 150px 150px 0 0;
+  padding: 60px 100px 80px 100px;
+  margin-top: -30px;
+}
+.heading{
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  margin-bottom: 20px;
+}
+.heading span{
+  color:#a020f0;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.text{
+  color: white;
+  font-size: 20px;
+  max-width: 500px;
+}
+.info{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.dtg{
+  background:#a020f0;
+  color: white;
+  font-weight: bold;
+  padding: 20px 20px 20px 20px;
+  border-radius: 20px;
+  font-size: 45px;
+}
+.edition{
+  color: white;
+  text-align: center;
+}
+.edition p{
+  margin: 5px 0;
+  font-size: 18px;
 }
