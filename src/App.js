@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./App.css";
+function App(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav className="navbar">
+        <div className="logo">
+          <img src="/images/alchemy logo.webp" alt='logo'/>
+        </div>
+        <div className="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#events">Events</a>
+          <a href="#guest">Guest lectures</a>
+          <a href="#Workshops">Workshops</a>
+          <a href="#accomodation">Accomodation</a>
+          <a href="#faqs">FAQs</a>
+        </div>
+        <button className="login-btn">LOGIN</button>
+      </nav>
+      <section className="first">
+        <h2 className='phrase'>Crude to Chemical</h2>
+        <h1 className="title">ALCHEMY'26</h1>
+    </section>
     </div>
   );
 }
-
 export default App;
