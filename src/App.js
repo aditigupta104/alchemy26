@@ -35,6 +35,19 @@ function App(){
 
       </div>
     </section>
+    <section className='about'>
+      <div className='content-box'>
+        <div className='about-text'>
+          <h2 className='heading'>ABOUT US</h2>
+          <p className='description'>
+            Alchemy '26 is a premier technical festival organized by the Department of Chemical Engineering, showcasing the transformative power of chemical sciences. Through workshops, guest lectures, competitions, and exhibitions, we provide a platform for students and professionals to explore innovations in catalysis, process engineering, sustainable chemistry, and emerging technologies that are reshaping our world.
+          </p>
+        </div>
+        <div className='animation'>
+          <p>3D ANIMATION</p>
+        </div>
+      </div>
+    </section>
     </div>
   );
 }

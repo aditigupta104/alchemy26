@@ -119,3 +119,40 @@
   margin: 5px 0;
   font-size: 18px;
 }
+.about{
+  background: black;
+  padding: 80px 100px;
+}
+.content-box{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 55px;
+}
+.about-text{
+  flex: 2;
+}
+.heading{
+  color: #a020f0;
+  font-size: 66px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.description{
+  color: white;
+  font-size: 20px;
+}
+.animation{
+  flex:1;
+  background: #a020f0;
+  display:flex;
+  min-height: 390px;
+  align-items: center;
+  justify-content: center;
+}
+.animation p{
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+
+}
