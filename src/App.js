@@ -48,6 +48,59 @@ function App(){
         </div>
       </div>
     </section>
+    <section className='event-section'>
+      <h2 className='event-heading'>EVENTS</h2>
+      <div className='event-grid'>
+        <div className='event-card'>
+          <div className='image'>IMAGE</div>
+          <h3 className='event-name'>PAPER PRESENTATION</h3>
+          <p className='date'>9 MARCH,2026</p>
+          
+          <button className='register-btn'>Register Now</button>
+          
+        </div>
+        <div className='event-card'>
+          <div className='image'>IMAGE</div>
+          <h3 className='event-name'>CHEMICAL QUIZ</h3>
+          <p className='date'>10 MARCH,2026</p>
+          
+          <button className='register-btn'>Register Now</button>
+          
+        </div>
+        <div className='event-card'>
+          <div className='image'>IMAGE</div>
+          <h3 className='event-name'>ALCHEMY ARENA</h3>
+          <p className='date'>11 MARCH,2026</p>
+         
+          <button className='register-btn'>Register Now</button>
+          
+        </div>
+        <div className='event-card'>
+          <div className='image'>IMAGE</div>
+          <h3 className='event-name'>CHEMIMPACT</h3>
+          <p className='date'>12 MARCH,2026</p>
+          
+          <button className='register-btn'>Register Now</button>
+          
+        </div>
+        <div className='event-card'>
+          <div className='image'>IMAGE</div>
+          <h3 className='event-name'>CHEMPARDY</h3>
+          <p className='date'>13 MARCH,2026</p>
+        
+          <button className='register-btn'>Register Now</button>
+          
+        </div>
+        <div className='event-card'>
+          <div className='image'>IMAGE</div>
+          <h3 className='event-name'>PAPER PRESENTATION</h3>
+          <p className='date'>9 MARCH,2026</p>
+         
+          <button className='register-btn'>Register Now</button>
+          
+        </div>
+      </div>
+    </section>
     </div>
   );
 }

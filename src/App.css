@@ -156,3 +156,68 @@
   color: black;
 
 }
+.event-section{
+  background: black;
+  padding: 80px 100px;
+}
+.event-heading{
+  color: #a020f0;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.event-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+}
+.event-card{
+  background: black;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(160,32,240,0.3);
+  border-color: #a020f0;
+}
+.image{
+  width:100%;
+  align-items:center;
+  color:white;
+  font-size:24px;
+  border-radius:10px;
+  height:200px;
+  background: #a020f0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.event-name{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.date{
+  color: #a020f0;
+  font-size:15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.register-btn{
+  background: #a020f0;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+.register-btn:hover{
+  background: #8a1acc;
+}
