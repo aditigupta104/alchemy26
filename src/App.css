@@ -221,3 +221,115 @@
 .register-btn:hover{
   background: #8a1acc;
 }
+@media (max-width: 768px){
+  .navbar{
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  .nav-menu{
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    width: 100%;
+  }
+  .nav-menu a{
+    font-size: 16px;
+    text-align: center;
+  }
+  .login-btn{
+    width: 100%;
+    padding: 12px 20px;
+  }
+  .logo img{
+    height: 50px;
+  }
+  .first{
+    padding: 40px 20px;
+  }
+  .phrase{
+    position: static;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .title{
+    font-size: 48px;
+    letter-spacing: 4px;
+  }
+  .fest-part{
+    padding: 60px 20px;
+  }
+  .heading{
+    font-size:30px;
+    margin-bottom:30px;
+  }
+  .content{
+    flex-direction:column;
+    gap: 30px;
+  }
+  .text{
+    font-size: 16px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .info{
+    flex-direction: column;
+    width: 100%;
+  }
+  .dtg{
+    width: 100%;
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  .edition{
+    font-size: 16px;
+  }
+  .about{
+    padding: 60px 20px;
+  }
+  .content-box{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-text{
+    font-size: 40px;
+    text-align: center;
+  }
+  .description{
+    font-size: 16px;
+    text-align: center;
+  }
+  .animation{
+    min-height: 250px;
+    width: 100%;
+  }
+  .animation p{
+    font-size: 32px;
+  }
+  .event-section{
+    padding: 60px 20px;
+  }
+  .event-heading{
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .event-grid{
+    grid-template-columns:1fr;
+    gap: 30px;
+  }
+  .image{
+    height: 180px;
+    font-size: 20px;
+  }
+  .event-name{
+    font-size: 20px;
+  }
+  .event-date{
+    font-size: 14px;
+  }
+  .register-btn{
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

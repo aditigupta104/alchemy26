@@ -20,5 +20,16 @@ useEffect(()=>{
     const torusKnot= new THREE.Mesh(geometry, material);
     scene.add(torusKnot);
     camera.position.z=8;
-    
-})
+    //animation loop
+    const animate=()=>{
+        requestAnimationFrame(animate);
+        torusKnot.rotation.x+=0.01;
+        torusKnot.rotation.y+=0.01;
+        renderer.render(scene,camera);
+    };
+    animate();
+    return()=>{
+        container.removeChild(renderer.domElement);
+    };
+},[]);
+return <div ref={containerRef} style={{width: '100%', height:'100%'}}/>;
