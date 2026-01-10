@@ -8,20 +8,20 @@ function App(){
         </div>
         <div className="nav-menu">
           <a href="#home">Home</a>
-          <a href="#about">About Us</a>
+          <a href="#about-section">About Us</a>
           <a href="#events">Events</a>
-          <a href="#guest">Guest lectures</a>
-          <a href="#Workshops">Workshops</a>
-          <a href="#accomodation">Accomodation</a>
-          <a href="#faqs">FAQs</a>
+          <a href="#events">Guest lectures</a>
+          <a href="#events">Workshops</a>
+          <a href="#events">Accomodation</a>
+          <a href="#events">FAQs</a>
         </div>
         <button className="login-btn">LOGIN</button>
       </nav>
-      <section className="first">
+      <section className="first" id="home">
         <h2 className='phrase'>Crude to Chemical</h2>
         <h1 className="title">ALCHEMY'26</h1>
     </section>
-    <section className="fest-part">
+    <section className="fest-part" id="home">
       <h2 className="heading">Be a part of our <span>Fest!</span> </h2>
       <div className="content">
         <p className="text">
@@ -35,7 +35,7 @@ function App(){
 
       </div>
     </section>
-    <section className='about'>
+    <section className='about' id="about-section">
       <div className='content-box'>
         <div className='about-text'>
           <h2 className='heading'>ABOUT US</h2>
@@ -48,7 +48,7 @@ function App(){
         </div>
       </div>
     </section>
-    <section className='event-section'>
+    <section className='event-section' id='events'>
       <h2 className='event-heading'>EVENTS</h2>
       <div className='event-grid'>
         <div className='event-card'>
