@@ -15,7 +15,7 @@ function App(){
           <a href="#events">Accomodation</a>
           <a href="#events">FAQs</a>
         </div>
-        <button className="login-btn">LOGIN</button>
+        
       </nav>
       <section className="first" id="home">
         <h2 className='phrase'>Crude to Chemical</h2>
@@ -29,6 +29,7 @@ function App(){
         </p>
         <div className="info">
           <div className="dtg">96 Days to go</div>
+    <a href='/brochure.pdf' download='Alchemy26-Brochure.pdf' className='brochure-btn' style={{textDecoration: 'none', display: 'inline-block'}}>Download Brochure</a>
           <div className="edition"><p>10th Edition</p>
           <p>2026</p></div>
         </div>
