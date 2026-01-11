@@ -11,7 +11,7 @@ function App(){
         <div className="logo">
           <img src="/images/alchemy logo.webp" alt='logo'/>
         </div>
-  <button className='burger-btn' onClick={()=>setMenuOpen(!menuOpen)}>
+  <button className='burger-btn' onClick={()=>{setMenuOpen(!menuOpen)}}>
     <span></span>
     <span></span>
     <span></span>

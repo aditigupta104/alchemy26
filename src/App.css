@@ -25,6 +25,8 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  position:relative;
+  z-index:1000;
 }
 .logo img{
   height:60px;
@@ -256,25 +258,33 @@ section {
   }
   .nav-menu{
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    width: 100%;
+    gap: 0;
+    padding: 100px 20px 20px 20px;
+    width: 80%;
     position: fixed;
-    top:80px;
+    top:0px;
     left:-100%;
-    background: rgba(0,0,0,0.95);
+    height:100vh;
+    background: rgba(0,0,0,0.98);
     transition: left 0.3s ease;
     z-index:1000;
   }
   nav-menu.active{
     left:0;
+    box-shadow: 2px 0 10px rgba(160,32,240,0.3);
   }
   .nav-menu a{
     font-size: 16px;
-    text-align: center;
-    padding: 15px 0;
+    text-align: left;
+    padding: 20px 15px;
     border-bottom: 1px solid black;
+    background: transparent !important;
+    border-radius:0;
   }
+  .nav-menu a:first-child {
+  background: transparent !important;
+  padding: 20px 15px;
+}
   .login-btn{
     width: 100%;
     padding: 12px 20px;
