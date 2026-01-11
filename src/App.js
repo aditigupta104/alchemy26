@@ -1,19 +1,29 @@
 import "./App.css";
+import ThreeAnimation from './ThreeAnimation';
+import {useState} from 'react';
 function App(){
+  const [menuOpen, setMenuOpen]=useState(false);
+  const [openFaq, setOpenFaq]=useState(false);
+  const toggleFaq=(index)=>{setOpenFaq(openFaq===index?null : index);}
   return (
     <div className="App">
       <nav className="navbar">
         <div className="logo">
           <img src="/images/alchemy logo.webp" alt='logo'/>
         </div>
-        <div className="nav-menu">
-          <a href="#home">Home</a>
-          <a href="#about-section">About Us</a>
-          <a href="#events">Events</a>
-          <a href="#events">Guest lectures</a>
-          <a href="#events">Workshops</a>
-          <a href="#events">Accomodation</a>
-          <a href="#events">FAQs</a>
+  <button className='burger-btn' onClick={()=>setMenuOpen(!menuOpen)}>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+        <div className={`nav-menu ${menuOpen ? 'active': ''}`}>
+          <a href="#home" onClick={()=>setMenuOpen(false)}>Home</a>
+          <a href="#about-section" onClick={()=>setMenuOpen(false)}>About Us</a>
+          <a href="#events" onClick={()=>setMenuOpen(false)}>Events</a>
+          <a href="#events" onClick={()=>setMenuOpen(false)}>Guest lectures</a>
+          <a href="#events" onClick={()=>setMenuOpen(false)}>Workshops</a>
+          <a href="#events" onClick={()=>setMenuOpen(false)}>Accomodation</a>
+          <a href="#events" onClick={()=>setMenuOpen(false)}>FAQs</a>
         </div>
         
       </nav>
@@ -45,63 +55,65 @@ function App(){
           </p>
         </div>
         <div className='animation'>
-          <p>3D ANIMATION</p>
+          <ThreeAnimation/>
         </div>
       </div>
     </section>
-    <section className='event-section' id='events'>
-      <h2 className='event-heading'>EVENTS</h2>
-      <div className='event-grid'>
-        <div className='event-card'>
-          <div className='image'>IMAGE</div>
-          <h3 className='event-name'>PAPER PRESENTATION</h3>
-          <p className='date'>9 MARCH,2026</p>
-          
-          <button className='register-btn'>Register Now</button>
-          
-        </div>
-        <div className='event-card'>
-          <div className='image'>IMAGE</div>
-          <h3 className='event-name'>CHEMICAL QUIZ</h3>
-          <p className='date'>10 MARCH,2026</p>
-          
-          <button className='register-btn'>Register Now</button>
-          
-        </div>
-        <div className='event-card'>
-          <div className='image'>IMAGE</div>
-          <h3 className='event-name'>ALCHEMY ARENA</h3>
-          <p className='date'>11 MARCH,2026</p>
-         
-          <button className='register-btn'>Register Now</button>
-          
-        </div>
-        <div className='event-card'>
-          <div className='image'>IMAGE</div>
-          <h3 className='event-name'>CHEMIMPACT</h3>
-          <p className='date'>12 MARCH,2026</p>
-          
-          <button className='register-btn'>Register Now</button>
-          
-        </div>
-        <div className='event-card'>
-          <div className='image'>IMAGE</div>
-          <h3 className='event-name'>CHEMPARDY</h3>
-          <p className='date'>13 MARCH,2026</p>
-        
-          <button className='register-btn'>Register Now</button>
-          
-        </div>
-        <div className='event-card'>
-          <div className='image'>IMAGE</div>
-          <h3 className='event-name'>PAPER PRESENTATION</h3>
-          <p className='date'>9 MARCH,2026</p>
-         
-          <button className='register-btn'>Register Now</button>
-          
-        </div>
+    
+   <section className='faq-section' id='faqs'>
+  <h2 className='faq-heading'>FAQs</h2>
+  <div className='faq-container'>
+    
+    <div className='faq-item'>
+      <div className='faq-ques' onClick={()=> toggleFaq(0)}>
+        <span>What is Alchemy'26?</span>
+        <span className={`faq-arrow ${openFaq===0?'open':''}`}>▼</span>
       </div>
-    </section>
+      <div className={`faq-ans ${openFaq===0?'show':''}`}>It is the 10th edition of our annual chemical engineering symposium.</div>
+    </div>
+
+    <div className='faq-item'>
+      <div className='faq-ques' onClick={()=> toggleFaq(1)}>
+        <span>When is the event happening?</span>
+        <span className={`faq-arrow ${openFaq===1?'open':''}`}>▼</span>
+      </div>
+      <div className={`faq-ans ${openFaq===1?'show':''}`}>The event will take place in March 2026.</div>
+    </div>
+
+    <div className='faq-item'>
+      <div className='faq-ques' onClick={()=> toggleFaq(2)}>
+        <span>How can I register for events?</span>
+        <span className={`faq-arrow ${openFaq===2?'open':''}`}>▼</span>
+      </div>
+      <div className={`faq-ans ${openFaq===2?'show':''}`}>Click the Register Now button on each event card.</div>
+    </div>
+
+    <div className='faq-item'>
+      <div className='faq-ques' onClick={()=> toggleFaq(3)}>
+        <span>Is there any registration fee?</span>
+        <span className={`faq-arrow ${openFaq===3?'open':''}`}>▼</span>
+      </div>
+      <div className={`faq-ans ${openFaq===3?'show':''}`}>Registration fees vary by event. Check individual event details.</div>
+    </div>
+
+    <div className='faq-item'>
+      <div className='faq-ques' onClick={()=> toggleFaq(4)}>
+        <span>Can students from other colleges participate?</span>
+        <span className={`faq-arrow ${openFaq===4?'open':''}`}>▼</span>
+      </div>
+      <div className={`faq-ans ${openFaq===4?'show':''}`}>Yes! Alchemy '26 is open to all college students.</div>
+    </div>
+
+    <div className='faq-item'>
+      <div className='faq-ques' onClick={()=> toggleFaq(5)}>
+        <span>Will accommodation be provided?</span>
+        <span className={`faq-arrow ${openFaq===5?'open':''}`}>▼</span>
+      </div>
+      <div className={`faq-ans ${openFaq===5?'show':''}`}>Yes, accommodation will be available for outstation participants.</div>
+    </div>
+
+  </div>
+</section>
     </div>
   );
 }
