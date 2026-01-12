@@ -22,25 +22,49 @@ section {
 }
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px 40px;
   position:relative;
   z-index:1000;
+  gap:60px;
+}
+.nav-links{
+  display: flex;
+  gap:20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight:bold;
+  transition: color 0.3s ease;
+
+}
+.burger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  gap:5px;
+}
+.burger span{
+  width:25px;
+  height:3px;
+  background:white;
+  transition:0.3s ease;
 }
 .logo img{
   height:60px;
   width: auto;
 }
-.nav-menu {
+.nav-links{
   display: flex;
   gap: 30px;
   background: rgba(255, 255, 255, 0.1);
   padding: 12px 30px;
   border-radius: 50px;
-  backdrop-filter: blue(10px);
+  backdrop-filter: blur(10px);
 }
-.nav-menu a {
+.nav-links a {
   display: flex;
   gap: 30px;
   background: rgba(255, 255, 255, 0.1);
@@ -234,154 +258,183 @@ section {
 .faq-arrow.open{
   transform:rotate(180deg);
 }
-.burger-btn{
-  cursor:pointer;
-  display:none;
-  flex-direction: column;
-  gap:5px;
-  background: transparent;
-  border:none;
-  padding:10px;
-}
-.burger-btn span{
-  width:25px;
-  height:3px;
-  background:white;
-  border-radius:3px;
-  transition: all 0.3 ease;
-}
-@media (max-width: 768px){
-  .navbar{
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 20px;
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Burger Button - Show on mobile */
+  .burger {
+    display: flex;
   }
-  .nav-menu{
-    flex-direction: column;
-    gap: 0;
-    padding: 100px 20px 20px 20px;
-    width: 80%;
+  .nav-links{
     position: fixed;
-    top:0px;
+    top:0;
     left:-100%;
+    width:70%;
+    background: #000;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding: 100px 0 20px;
     height:100vh;
-    background: rgba(0,0,0,0.98);
-    transition: left 0.3s ease;
-    z-index:1000;
+    transition: left o.4s ease;
   }
-  nav-menu.active{
+  .nav-links.open{
     left:0;
-    box-shadow: 2px 0 10px rgba(160,32,240,0.3);
   }
-  .nav-menu a{
-    font-size: 16px;
-    text-align: left;
-    padding: 20px 15px;
-    border-bottom: 1px solid black;
-    background: transparent !important;
-    border-radius:0;
+  .nav-links a {
+    font-size: 18px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #333;
   }
-  .nav-menu a:first-child {
-  background: transparent !important;
-  padding: 20px 15px;
+  .burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-  .login-btn{
-    width: 100%;
-    padding: 12px 20px;
-  }
-  .logo img{
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+  .logo img {
     height: 50px;
   }
-  .first{
+
+  /* Navigation Menu */
+  .nav-menu {
+    position: fixed !important;
+    top: 0;
+    left: -100%;
+    flex-direction: column !important;
+    background: #000000 !important;
+    width: 70%;
+    height: 100vh;
+    padding: 100px 0 20px 0 !important;
+    transition: left 0.4s ease !important;
+    z-index: 1000;
+    gap: 0 !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+  }
+
+  .nav-menu.active {
+    left: 0 !important;
+  }
+
+  .nav-menu a {
+    font-size: 18px !important;
+    text-align: left !important;
+    padding: 20px 30px !important;
+    border-bottom: 1px solid #333;
+    background: transparent !important;
+    border-radius: 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .nav-menu a:first-child {
+    background: transparent !important;
+    padding: 20px 30px !important;
+  }
+
+  /* Rest of mobile styles... */
+  .first {
     padding: 40px 20px;
   }
-  .phrase{
+
+  .phrase {
     position: static;
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
   }
-  .title{
+
+  .title {
     font-size: 48px;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
   }
-  .fest-part{
+
+  .fest-part {
     padding: 60px 20px;
+    border-radius: 50% 50% 0 0 / 100px 100px 0 0;
   }
-  .heading{
-    font-size:30px;
-    margin-bottom:30px;
+
+  .heading {
+    font-size: 32px;
+    margin-bottom: 30px;
   }
-  .content{
-    flex-direction:column;
+
+  .content {
+    flex-direction: column;
     gap: 30px;
   }
-  .text{
+
+  .text {
     font-size: 16px;
     max-width: 100%;
     text-align: center;
   }
-  .info{
+
+  .info {
     flex-direction: column;
     width: 100%;
   }
-  .dtg{
+
+  .dtg {
     width: 100%;
     font-size: 20px;
     padding: 15px 30px;
   }
-  .edition{
+
+  .brochure-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  .edition {
     font-size: 16px;
   }
-  .about{
+
+  .about {
     padding: 60px 20px;
   }
-  .content-box{
+
+  .content-box {
     flex-direction: column;
     gap: 30px;
   }
-  .about-text{
+
+  .heading {
     font-size: 40px;
     text-align: center;
   }
-  .description{
+
+  .description {
     font-size: 16px;
     text-align: center;
   }
-  .animation{
+
+  .animation {
     min-height: 250px;
     width: 100%;
   }
-  .animation p{
-    font-size: 32px;
-  }
-  .event-section{
+
+  .faq-section {
     padding: 60px 20px;
   }
-  .event-heading{
+
+  .faq-heading {
     font-size: 40px;
-    margin-bottom: 40px;
   }
-  .event-grid{
-    grid-template-columns:1fr;
-    gap: 30px;
+
+  .faq-ques {
+    font-size: 16px;
+    padding: 20px;
   }
-  .image{
-    height: 180px;
-    font-size: 20px;
-  }
-  .event-name{
-    font-size: 20px;
-  }
-  .event-date{
+
+  .faq-ans {
     font-size: 14px;
   }
-  .register-btn{
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-  .burger-btn{
-    display:flex;
-  }
-  
 }

@@ -1,5 +1,4 @@
 import "./App.css";
-import ThreeAnimation from './ThreeAnimation';
 import {useState} from 'react';
 function App(){
   const [menuOpen, setMenuOpen]=useState(false);
@@ -11,22 +10,19 @@ function App(){
         <div className="logo">
           <img src="/images/alchemy logo.webp" alt='logo'/>
         </div>
-  <button className='burger-btn' onClick={()=>{setMenuOpen(!menuOpen)}}>
+  <div className={`burger ${menuOpen ? "active" : ""}`}
+  onClick={()=> setMenuOpen(!menuOpen)}>
     <span></span>
     <span></span>
     <span></span>
-  </button>
-        <div className={`nav-menu ${menuOpen ? 'active': ''}`}>
+  </div>
+   <div className={`nav-links ${menuOpen ? 'open' : ""}`}>
           <a href="#home" onClick={()=>setMenuOpen(false)}>Home</a>
           <a href="#about-section" onClick={()=>setMenuOpen(false)}>About Us</a>
-          <a href="#events" onClick={()=>setMenuOpen(false)}>Events</a>
-          <a href="#events" onClick={()=>setMenuOpen(false)}>Guest lectures</a>
-          <a href="#events" onClick={()=>setMenuOpen(false)}>Workshops</a>
-          <a href="#events" onClick={()=>setMenuOpen(false)}>Accomodation</a>
-          <a href="#events" onClick={()=>setMenuOpen(false)}>FAQs</a>
+          <a href="#faqs" onClick={()=>setMenuOpen(false)}>FAQs</a>
         </div>
-        
-      </nav>
+        </nav>
+      
       <section className="first" id="home">
         <h2 className='phrase'>Crude to Chemical</h2>
         <h1 className="title">ALCHEMY'26</h1>
@@ -55,7 +51,7 @@ function App(){
           </p>
         </div>
         <div className='animation'>
-          <ThreeAnimation/>
+          
         </div>
       </div>
     </section>
@@ -66,52 +62,59 @@ function App(){
     
     <div className='faq-item'>
       <div className='faq-ques' onClick={()=> toggleFaq(0)}>
-        <span>What is Alchemy'26?</span>
+        <span>What are the necessary documents to be brought?</span>
         <span className={`faq-arrow ${openFaq===0?'open':''}`}>▼</span>
       </div>
-      <div className={`faq-ans ${openFaq===0?'show':''}`}>It is the 10th edition of our annual chemical engineering symposium.</div>
+      <div className={`faq-ans ${openFaq===0?'show':''}`}>It is mandatory to bring your college ID card. For accommodation, a payment screenshot should be in hand.
+</div>
     </div>
 
     <div className='faq-item'>
       <div className='faq-ques' onClick={()=> toggleFaq(1)}>
-        <span>When is the event happening?</span>
+        <span>When will i get my caution deposit back?</span>
         <span className={`faq-arrow ${openFaq===1?'open':''}`}>▼</span>
       </div>
-      <div className={`faq-ans ${openFaq===1?'show':''}`}>The event will take place in March 2026.</div>
+      <div className={`faq-ans ${openFaq===1?'show':''}`}>The caution deposit shall be refunded at the time of vacating, provided there is no overstay or damage to the room or any other college property.</div>
     </div>
 
     <div className='faq-item'>
       <div className='faq-ques' onClick={()=> toggleFaq(2)}>
-        <span>How can I register for events?</span>
+        <span>Can i vacate earlier than the registered date?</span>
         <span className={`faq-arrow ${openFaq===2?'open':''}`}>▼</span>
       </div>
-      <div className={`faq-ans ${openFaq===2?'show':''}`}>Click the Register Now button on each event card.</div>
+      <div className={`faq-ans ${openFaq===2?'show':''}`}>Yes, but the money paid for the extra day(s) will not be refunded.</div>
     </div>
 
     <div className='faq-item'>
       <div className='faq-ques' onClick={()=> toggleFaq(3)}>
-        <span>Is there any registration fee?</span>
+        <span>Does workshop registration entitle accomodation as well?</span>
         <span className={`faq-arrow ${openFaq===3?'open':''}`}>▼</span>
       </div>
-      <div className={`faq-ans ${openFaq===3?'show':''}`}>Registration fees vary by event. Check individual event details.</div>
+      <div className={`faq-ans ${openFaq===3?'show':''}`}>No, you need to register separately for PR and accommodation.</div>
     </div>
 
     <div className='faq-item'>
       <div className='faq-ques' onClick={()=> toggleFaq(4)}>
-        <span>Can students from other colleges participate?</span>
+        <span>Can i cancel accommodation after registering?</span>
         <span className={`faq-arrow ${openFaq===4?'open':''}`}>▼</span>
       </div>
-      <div className={`faq-ans ${openFaq===4?'show':''}`}>Yes! Alchemy '26 is open to all college students.</div>
+      <div className={`faq-ans ${openFaq===4?'show':''}`}>Yes, but there will be no refunds.</div>
     </div>
 
     <div className='faq-item'>
       <div className='faq-ques' onClick={()=> toggleFaq(5)}>
-        <span>Will accommodation be provided?</span>
+        <span>Are the registration and hospitality fees per person or per team?</span>
         <span className={`faq-arrow ${openFaq===5?'open':''}`}>▼</span>
       </div>
-      <div className={`faq-ans ${openFaq===5?'show':''}`}>Yes, accommodation will be available for outstation participants.</div>
+      <div className={`faq-ans ${openFaq===5?'show':''}`}>The registration and hospitality fees are considered per person individually.</div>
     </div>
-
+ <div className='faq-item'>
+      <div className='faq-ques' onClick={()=> toggleFaq(6)}>
+        <span>Do event participants get certificates?</span>
+        <span className={`faq-arrow ${openFaq===6?'open':''}`}>▼</span>
+      </div>
+      <div className={`faq-ans ${openFaq===6?'show':''}`}>Yes, and winners are assured to get cash prizes.</div>
+    </div>
   </div>
 </section>
     </div>
