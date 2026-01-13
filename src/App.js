@@ -6,6 +6,7 @@ function App(){
   const toggleFaq=(index)=>{setOpenFaq(openFaq===index?null : index);}
   return (
     <div className="App">
+      
       <nav className="navbar">
         <div className="logo">
           <img src="/images/alchemy logo.webp" alt='logo'/>
@@ -21,6 +22,7 @@ function App(){
           <a href="#about-section" onClick={()=>setMenuOpen(false)}>About Us</a>
           <a href="#faqs" onClick={()=>setMenuOpen(false)}>FAQs</a>
         </div>
+
         </nav>
       
       <section className="first" id="home">

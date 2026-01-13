@@ -19,16 +19,24 @@ section {
 .App {
   min-height: 100vh;
   background: linear-gradient(to bottom, #1a0033, #4a0080);
+  padding-top:100px;
 }
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 40px;
-  position:relative;
-  z-index:1000;
-  gap:60px;
+  padding: 10px 40px;
+  gap: 60px;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+  background:rgba(0,0,0,0.3);
+  
 }
+
 .nav-links{
   display: flex;
   gap:20px;
@@ -263,19 +271,21 @@ section {
   /* Burger Button - Show on mobile */
   .burger {
     display: flex;
+    z-index: 1100;
   }
   .nav-links{
     position: fixed;
     top:0;
     left:-100%;
-    width:70%;
-    background: #000;
+    width:100%;
+    background: black;
     flex-direction:column;
     align-items:center;
-    display:none;
+    display:flex;
     padding: 100px 0 20px;
     height:100vh;
-    transition: left o.4s ease;
+    transition: left 0.4s ease;
+    z-index:1000;
   }
   .nav-links.open{
     left:0;
@@ -284,6 +294,13 @@ section {
     font-size: 18px;
     padding: 20px 30px;
     border-bottom: 1px solid #333;
+    width:100%;
+    text-align:center;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .nav-links a:hover{
+    background:#a020f0;
+    color:white;
   }
   .burger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
