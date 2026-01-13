@@ -48,6 +48,10 @@ section {
   transition: color 0.3s ease;
 
 }
+.nav-links a:hover{
+    background:#a020f0;
+    color:white;
+  }
 .burger{
   display:none;
   flex-direction:column;
