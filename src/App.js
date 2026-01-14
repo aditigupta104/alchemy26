@@ -37,7 +37,9 @@ function App(){
         </p>
         <div className="info">
           <div className="dtg">96 Days to go</div>
-    <a href='/brochure.pdf' download='Alchemy26-Brochure.pdf' className='brochure-btn' style={{textDecoration: 'none', display: 'inline-block'}}>Download Brochure</a>
+    <a href='/brochure.pdf'
+    target='_blank' rel='noopener noreferrer'
+    className='brochure-btn' style={{textDecoration: 'none', display: 'inline-block'}}>View Brochure</a>
           <div className="edition"><p>10th Edition</p>
           <p>2026</p></div>
         </div>
