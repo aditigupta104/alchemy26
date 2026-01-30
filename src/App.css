@@ -2,7 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 section {
-  scroll-margin-top: 100px;
+  -webkit-scroll-snap-margin-top: 100px; /* Safari iOS 11+ */
+  scroll-snap-margin-top: 100px; /* Safari iOS 11+ */
+  -webkit-scroll-margin-top: 100px; /* Safari iOS < 14.5 */
+  scroll-margin-top: 100px; /* Modern browsers */
 }
 
 
@@ -74,6 +77,7 @@ section {
   background: rgba(255, 255, 255, 0.1);
   padding: 12px 30px;
   border-radius: 50px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .nav-links a {
@@ -238,6 +242,9 @@ section {
 .faq-item:hover{
   border-color: #a020f0;
 }
+.faq-item.open{
+  border-color: #a020f0;
+}
 .faq-ques{
   display: flex;
   align-items: center;
@@ -246,6 +253,7 @@ section {
   cursor: pointer;
   padding: 25px 30px;
   color: white;
+  -webkit-user-select: none;
   user-select: none;
 }
 .faq-ans{

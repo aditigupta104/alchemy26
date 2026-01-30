@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "What is Alchemy '26?",
+    "answer": "Alchemy '26 is a premier technical festival organized by the Department of Chemical Engineering, showcasing innovations in chemical sciences through workshops, lectures, competitions, and exhibitions."
+  },
+  {
+    "id": 2,
+    "question": "When is Alchemy '26 happening?",
+    "answer": "Alchemy '26 is scheduled for 2026. More specific dates will be announced soon. Stay tuned for updates!"
+  },
+  {
+    "id": 3,
+    "question": "Who can participate in Alchemy '26?",
+    "answer": "Students and professionals from all backgrounds are welcome to participate. Whether you're interested in chemical engineering or just curious about the field, there's something for everyone."
+  },
+  {
+    "id": 4,
+    "question": "Are there any registration fees?",
+    "answer": "Registration details and fees will be announced soon. Keep an eye on our website and social media for updates."
+  },
+  {
+    "id": 5,
+    "question": "What events are included?",
+    "answer": "Alchemy '26 features workshops, guest lectures, technical competitions, exhibitions, and networking opportunities focused on catalysis, process engineering, and sustainable chemistry."
+  }
+]

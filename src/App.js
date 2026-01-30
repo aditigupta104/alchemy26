@@ -1,5 +1,6 @@
 import "./App.css";
 import {useState} from 'react';
+import FAQComponent from './FAQComponent';
 function App(){
   const [menuOpen, setMenuOpen]=useState(false);
   const [openFaq, setOpenFaq]=useState(false);
@@ -60,67 +61,9 @@ function App(){
       </div>
     </section>
     
-   <section className='faq-section' id='faqs'>
-  <h2 className='faq-heading'>FAQs</h2>
-  <div className='faq-container'>
+    <FAQComponent />
     
-    <div className='faq-item'>
-      <div className='faq-ques' onClick={()=> toggleFaq(0)}>
-        <span>What are the necessary documents to be brought?</span>
-        <span className={`faq-arrow ${openFaq===0?'open':''}`}>▼</span>
-      </div>
-      <div className={`faq-ans ${openFaq===0?'show':''}`}>It is mandatory to bring your college ID card. For accommodation, a payment screenshot should be in hand.
-</div>
-    </div>
-
-    <div className='faq-item'>
-      <div className='faq-ques' onClick={()=> toggleFaq(1)}>
-        <span>When will i get my caution deposit back?</span>
-        <span className={`faq-arrow ${openFaq===1?'open':''}`}>▼</span>
-      </div>
-      <div className={`faq-ans ${openFaq===1?'show':''}`}>The caution deposit shall be refunded at the time of vacating, provided there is no overstay or damage to the room or any other college property.</div>
-    </div>
-
-    <div className='faq-item'>
-      <div className='faq-ques' onClick={()=> toggleFaq(2)}>
-        <span>Can i vacate earlier than the registered date?</span>
-        <span className={`faq-arrow ${openFaq===2?'open':''}`}>▼</span>
-      </div>
-      <div className={`faq-ans ${openFaq===2?'show':''}`}>Yes, but the money paid for the extra day(s) will not be refunded.</div>
-    </div>
-
-    <div className='faq-item'>
-      <div className='faq-ques' onClick={()=> toggleFaq(3)}>
-        <span>Does workshop registration entitle accomodation as well?</span>
-        <span className={`faq-arrow ${openFaq===3?'open':''}`}>▼</span>
-      </div>
-      <div className={`faq-ans ${openFaq===3?'show':''}`}>No, you need to register separately for PR and accommodation.</div>
-    </div>
-
-    <div className='faq-item'>
-      <div className='faq-ques' onClick={()=> toggleFaq(4)}>
-        <span>Can i cancel accommodation after registering?</span>
-        <span className={`faq-arrow ${openFaq===4?'open':''}`}>▼</span>
-      </div>
-      <div className={`faq-ans ${openFaq===4?'show':''}`}>Yes, but there will be no refunds.</div>
-    </div>
-
-    <div className='faq-item'>
-      <div className='faq-ques' onClick={()=> toggleFaq(5)}>
-        <span>Are the registration and hospitality fees per person or per team?</span>
-        <span className={`faq-arrow ${openFaq===5?'open':''}`}>▼</span>
-      </div>
-      <div className={`faq-ans ${openFaq===5?'show':''}`}>The registration and hospitality fees are considered per person individually.</div>
-    </div>
- <div className='faq-item'>
-      <div className='faq-ques' onClick={()=> toggleFaq(6)}>
-        <span>Do event participants get certificates?</span>
-        <span className={`faq-arrow ${openFaq===6?'open':''}`}>▼</span>
-      </div>
-      <div className={`faq-ans ${openFaq===6?'show':''}`}>Yes, and winners are assured to get cash prizes.</div>
-    </div>
-  </div>
-</section>
+   
     </div>
   );
 }
