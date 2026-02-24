@@ -1,18 +1,13 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 section {
   -webkit-scroll-snap-margin-top: 100px; /* Safari iOS 11+ */
   scroll-snap-margin-top: 100px; /* Safari iOS 11+ */
-  -webkit-scroll-margin-top: 100px; /* Safari iOS < 14.5 */
-  scroll-margin-top: 100px; /* Modern browsers */
+  /* -webkit-scroll-margin-top: 100px; Safari iOS < 14.5 */
+  /* scroll-margin-top: 100px; Modern browsers */
 }
-
-
-
-
-
-
 
 * {
   margin: 0;
@@ -32,23 +27,24 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 40px;
-  gap: 60px;
-  z-index: 2000;
-  backdrop-filter: blur(5px);
-  background:rgba(0,0,0,0.3);
-  
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  /* gap: 40x; */
+  margin-top: 40px;
 }
-
 .nav-links{
   display: flex;
-  gap:20px;
+  
 }
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight:bold;
-  transition: color 0.3s ease;
+ 
 
 }
 .nav-links a:hover{
@@ -70,22 +66,26 @@ section {
 .logo img{
   height:60px;
   width: auto;
+  margin-right: 70px;
+
 }
 .nav-links{
   display: flex;
   gap: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
   padding: 12px 30px;
   border-radius: 50px;
+  border: 2px solid white;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .nav-links a {
   display: flex;
   gap: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  
   padding: 12px 30px;
   border-radius: 50px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .nav-menu a{
@@ -114,9 +114,35 @@ section {
   transform: scale(1.05);
 }
 .first{
-  text-align:center;
-  padding: 100px 20px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 20px 100px 20px;
+  margin-top: 0;
+  min-height: 100vh;
+  /* Background image placed behind the text */
+  background-image: 
+    linear-gradient(135deg, rgba(160, 32, 240, 0.6), rgba(26, 0, 51, 0.7)),
+    url('../public/images/herosecimg.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* create stacking context for overlay and content */
+  z-index: 10;
+}
+
+/* darker overlay so text remains readable; adjust opacity here */
+.first::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.1);
+  z-index: 1;
+  pointer-events: none;
 }
 .phrase{
   color: #a020f0;
@@ -125,18 +151,28 @@ section {
   position: absolute;
   top: 90px;
   right: 100px;
+  z-index: 2; /* sit above overlay */
 }
 .title{
   font-size: 124px;
   font-weight: bold;
-  color: #b8b8b8;
-  margin: 0;
+  color: #ffffff;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; /* sit above the overlay */
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 .fest-part{
   background: black;
-  border-radius: 50% 50% 0 0 / 150px 150px 0 0;
+  border-radius: 50% 50% 0 0 / 180px 180px 0 0;
   padding: 60px 100px 80px 100px;
-  margin-top: -30px;
+  margin-top: -200px;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 .heading{
   text-align: center;
@@ -344,9 +380,9 @@ section {
     z-index: 1000;
     gap: 0 !important;
     border-radius: 0 !important;
+    -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
   }
-
   .nav-menu.active {
     left: 0 !important;
   }

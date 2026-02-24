@@ -1,6 +1,7 @@
 import "./App.css";
 import {useState} from 'react';
-import FAQComponent from './FAQComponent';
+import FAQComponent from './components/Faq/faq';
+
 function App(){
   const [menuOpen, setMenuOpen]=useState(false);
   const [openFaq, setOpenFaq]=useState(false);
@@ -21,13 +22,17 @@ function App(){
    <div className={`nav-links ${menuOpen ? 'open' : ""}`}>
           <a href="#home" onClick={()=>setMenuOpen(false)}>Home</a>
           <a href="#about-section" onClick={()=>setMenuOpen(false)}>About Us</a>
+          <a href="#events" onClick={()=>setMenuOpen(false)}>Events</a>
+          <a href="#workshops" onClick={()=>setMenuOpen(false)}>Workshops</a>
+          <a href="#guest-lectures" onClick={()=>setMenuOpen(false)}>Guest Lectures</a>
+          <a href="#accommodation" onClick={()=>setMenuOpen(false)}>Accommodation</a>
           <a href="#faqs" onClick={()=>setMenuOpen(false)}>FAQs</a>
         </div>
 
         </nav>
       
       <section className="first" id="home">
-        <h2 className='phrase'>Crude to Chemical</h2>
+        {/* <h2 className='phrase'>Crude to Chemical</h2> */}
         <h1 className="title">ALCHEMY'26</h1>
     </section>
     <section className="fest-part" id="home">
